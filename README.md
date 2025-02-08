@@ -1,16 +1,15 @@
-## Hi there 👋
+# Hi, I'm Adil Chbada! 🚀  
 
-<!--
-**adil-chbada/adil-chbada** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+👨‍💻 **Full-Stack Developer** | Crafting Scalable & High-Performance Apps  
 
-Here are some ideas to get you started:
+Passionate about building robust web platforms, I specialize in backend architecture, frontend experiences, and infrastructure optimization. Currently developing **Digishare CMS**, a multi-platform CRM for WhatsApp and beyond.  
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🔥 Tech Stack  
+- **Backend:** Laravel, Bun, Elysia.js  
+- **Frontend:** Vue 3, TypeScript, Vuetify, Flutter  
+- **DevOps:** Docker, OVH, AWS  
+- **Performance & DX:** Vite, ESM, Modular Architectures  
+
+📫 **Let's connect on [LinkedIn](https://www.linkedin.com/in/adil-chbada/)**  
+
+💡 *Always experimenting, always optimizing.* 🚀  
