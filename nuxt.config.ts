@@ -1,5 +1,6 @@
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
-  css: ['@inspira/ui/dist/style.css'],
   app: {
     baseURL: '/adil-chbada/', // For GitHub Pages
     head: {
@@ -12,5 +13,11 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap' }
       ]
     }
-  }
+  },
+  css: ['~/assets/css/main.css'],
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
 })
