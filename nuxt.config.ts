@@ -1,6 +1,7 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
+  ssr: false, // Optional: if you don't need SSR
   app: {
     baseURL: '/adil-chbada/', // For GitHub Pages
     head: {
@@ -14,10 +15,18 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   css: ['~/assets/css/main.css'],
+
   vite: {
     plugins: [
       tailwindcss(),
     ],
   },
+
+  modules: [
+    '@vueuse/nuxt',
+  ],
+
+  compatibilityDate: '2025-02-09',
 })

@@ -793,6 +793,11 @@
   resolved "https://registry.npmjs.org/@tailwindcss/oxide-linux-x64-gnu/-/oxide-linux-x64-gnu-4.0.5.tgz"
   integrity sha512-DYgieNDRkTy69bWPgdsc47nAXa74P63P/RetUwYM9vYj5USyOfHCEcqIthkCuYw3dXKBhjgwe697TmL2g2jpAw==
 
+"@tailwindcss/oxide-linux-x64-musl@4.0.5":
+  version "4.0.5"
+  resolved "https://registry.npmjs.org/@tailwindcss/oxide-linux-x64-musl/-/oxide-linux-x64-musl-4.0.5.tgz"
+  integrity sha512-z2RzUvOQl0ZqrZqmCFP53tJbBXQ3UmLD/E6J7+q0e+4VaFnXCcIYTfQbHgI8f3fash+q6gK80Ko/ywEQ+bvv6Q==
+
 "@tailwindcss/oxide@^4.0.5":
   version "4.0.5"
   resolved "https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.0.5.tgz"
@@ -1122,7 +1127,7 @@
     "@vueuse/shared" "10.11.1"
     vue-demi ">=0.14.8"
 
-"@vueuse/core@^12.5.0":
+"@vueuse/core@^12.5.0", "@vueuse/core@12.5.0":
   version "12.5.0"
   resolved "https://registry.npmjs.org/@vueuse/core/-/core-12.5.0.tgz"
   integrity sha512-GVyH1iYqNANwcahAx8JBm6awaNgvR/SwZ1fjr10b8l1HIgDp82ngNbfzJUgOgWEoxjL+URAggnlilAEXwCOZtg==
@@ -1141,6 +1146,17 @@
   version "12.5.0"
   resolved "https://registry.npmjs.org/@vueuse/metadata/-/metadata-12.5.0.tgz"
   integrity sha512-Ui7Lo2a7AxrMAXRF+fAp9QsXuwTeeZ8fIB9wsLHqzq9MQk+2gMYE2IGJW48VMJ8ecvCB3z3GsGLKLbSasQ5Qlg==
+
+"@vueuse/nuxt@^12.5.0":
+  version "12.5.0"
+  resolved "https://registry.npmjs.org/@vueuse/nuxt/-/nuxt-12.5.0.tgz"
+  integrity sha512-daqSOlXv5ilAiT5GlRBtfqdkYjeMO9P6n50OpbEVm9hXmfXmZoXK3YMND8l5n5KcscD4pnD66IrYPqqOW5eH1Q==
+  dependencies:
+    "@nuxt/kit" "^3.15.1"
+    "@vueuse/core" "12.5.0"
+    "@vueuse/metadata" "12.5.0"
+    local-pkg "^1.0.0"
+    vue "^3.5.13"
 
 "@vueuse/shared@10.11.1":
   version "10.11.1"
@@ -2703,6 +2719,11 @@ lightningcss-linux-x64-gnu@1.29.1:
   resolved "https://registry.npmjs.org/lightningcss-linux-x64-gnu/-/lightningcss-linux-x64-gnu-1.29.1.tgz"
   integrity sha512-u1S+xdODy/eEtjADqirA774y3jLcm8RPtYztwReEXoZKdzgsHYPl0s5V52Tst+GKzqjebkULT86XMSxejzfISw==
 
+lightningcss-linux-x64-musl@1.29.1:
+  version "1.29.1"
+  resolved "https://registry.npmjs.org/lightningcss-linux-x64-musl/-/lightningcss-linux-x64-musl-1.29.1.tgz"
+  integrity sha512-L0Tx0DtaNUTzXv0lbGCLB/c/qEADanHbu4QdcNOXLIe1i8i22rZRpbT3gpWYsCh9aSL9zFujY/WmEXIatWvXbw==
+
 lightningcss@^1.21.0, lightningcss@^1.29.1:
   version "1.29.1"
   resolved "https://registry.npmjs.org/lightningcss/-/lightningcss-1.29.1.tgz"
@@ -3169,7 +3190,7 @@ nth-check@^2.0.1:
   dependencies:
     boolbase "^1.0.0"
 
-nuxt@^3.15.4:
+nuxt@^3.0.0, nuxt@^3.15.4:
   version "3.15.4"
   resolved "https://registry.npmjs.org/nuxt/-/nuxt-3.15.4.tgz"
   integrity sha512-hSbZO4mR0uAMJtZPNTnCfiAtgleoOu28gvJcBNU7KQHgWnNXPjlWgwMczko2O4Tmnv9zIe/CQged+2HsPwl2ZA==
