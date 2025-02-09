@@ -5,8 +5,7 @@ export default defineNuxtConfig({
   ssr: false,
   
   app: {
-    baseURL: '/adil-chbada/',
-    buildAssetsDir: 'assets',
+    // Remove the baseURL since we're deploying to root
     head: {
       title: 'Adil Chbada - Full-Stack Developer',
       meta: [
@@ -19,19 +18,15 @@ export default defineNuxtConfig({
     }
   },
 
-  // CSS configuration
   css: ['~/assets/css/main.css'],
 
-  // Vite configuration
   vite: {
     plugins: [
       tailwindcss(),
     ],
-    // Add base configuration for GitHub Pages
-    base: '/adil-chbada/',
+    // Remove the base configuration
   },
 
-  // Modules
   modules: [
     '@vueuse/nuxt',
   ],
@@ -57,6 +52,5 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-02-09',
 
-  // Development configuration
   devtools: { enabled: true }
 })
