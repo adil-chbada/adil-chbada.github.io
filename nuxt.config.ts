@@ -27,9 +27,7 @@ export default defineNuxtConfig({
     // Remove the base configuration
   },
 
-  modules: [
-    '@vueuse/nuxt',
-  ],
+  modules: ['@vueuse/nuxt', '@nuxt/icon'],
 
   // Build configuration
   build: {
