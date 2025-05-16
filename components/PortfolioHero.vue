@@ -12,14 +12,12 @@
 
     <!-- Dark Mode Toggle with NuxtIcon -->
     <button
-      @click="isDark = !isDark"
+      @click="toggleDarkMode"
       class="fixed top-6 right-6 z-50 p-3 backdrop-blur-md bg-white/80 dark:bg-gray-800/80 text-indigo-600 dark:text-indigo-400 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
       aria-label="Toggle dark mode"
     >
-      <ClientOnly>
-        <Icon v-if="isDark" name="ph:sun-duotone" class="w-6 h-6" />
-        <Icon v-else name="ph:moon-stars-duotone" class="w-6 h-6" />
-      </ClientOnly>
+      <NuxtIcon v-if="isDark" name="ph:sun-duotone" class="w-6 h-6" />
+      <NuxtIcon v-else name="ph:moon-stars-duotone" class="w-6 h-6" />
     </button>
 
     <!-- Main Content with improved spacing and layout -->
@@ -27,22 +25,18 @@
       <div class="container mx-auto max-w-7xl">
         <div class="flex flex-col items-center">
           <!-- Profile Header with avatar and enhanced layout -->
-          <section class="w-full mb-24 flex flex-col items-center" v-inspira="1">
+          <section class="w-full mb-24 flex flex-col items-center" data-inspira="1">
             <div class="relative mb-8">
               <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg flex items-center justify-center text-white text-4xl md:text-5xl font-bold">
                 AC
               </div>
               <div class="absolute -bottom-2 -right-2 bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg">
-                <ClientOnly>
-                  <Icon name="ph:check-circle-fill" class="w-6 h-6 text-green-500" />
-                </ClientOnly>
+                <NuxtIcon name="ph:check-circle-fill" class="w-6 h-6 text-green-500" />
               </div>
             </div>
             <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight text-center">Adil Chbada</h1>
             <div class="inline-flex items-center px-5 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-lg font-medium shadow-md mb-6">
-              <ClientOnly>
-                <Icon name="ph:code-duotone" class="w-5 h-5 mr-2" />
-              </ClientOnly>
+              <NuxtIcon name="ph:code-duotone" class="w-5 h-5 mr-2" />
               <span>Full-Stack Developer</span>
             </div>
             <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl text-center">
@@ -55,12 +49,10 @@
             <!-- Left column (wide) -->
             <div class="lg:col-span-8 space-y-20">
               <!-- Bio Section with enhanced typography -->
-              <section v-inspira="2">
+              <section data-inspira="2">
                 <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-3xl shadow-xl p-8 transform hover:shadow-2xl transition-all duration-300">
                   <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-                    <ClientOnly>
-                      <Icon name="ph:user-circle-duotone" class="w-8 h-8 mr-3 text-indigo-500 dark:text-indigo-400" />
-                    </ClientOnly>
+                    <NuxtIcon name="ph:user-circle-duotone" class="w-8 h-8 mr-3 text-indigo-500 dark:text-indigo-400" />
                     About Me
                   </h2>
                   <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -76,11 +68,9 @@
               </section>
 
               <!-- Current Projects Section -->
-              <section v-inspira="3">
+              <section data-inspira="3">
                 <div class="mb-8 flex items-center">
-                  <ClientOnly>
-                    <Icon name="ph:rocket-launch-duotone" class="w-8 h-8 mr-3 text-indigo-500 dark:text-indigo-400" />
-                  </ClientOnly>
+                  <NuxtIcon name="ph:rocket-launch-duotone" class="w-8 h-8 mr-3 text-indigo-500 dark:text-indigo-400" />
                   <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Current Projects</h2>
                 </div>
                 
@@ -89,9 +79,7 @@
                   <div class="p-8">
                     <div class="flex items-start">
                       <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/50 rounded-2xl flex items-center justify-center shadow-inner mr-6">
-                        <ClientOnly>
-                          <Icon name="ph:device-mobile-camera-duotone" class="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
-                        </ClientOnly>
+                        <NuxtIcon name="ph:device-mobile-camera-duotone" class="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
                       </div>
                       <div>
                         <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Digishare CMS</h3>
@@ -100,15 +88,11 @@
                         </p>
                         <div class="flex flex-wrap gap-2">
                           <span class="px-3 py-1 bg-green-100/80 dark:bg-green-900/30 text-green-800 dark:text-green-200 text-xs rounded-full flex items-center">
-                            <ClientOnly>
-                              <Icon name="ph:code-duotone" class="w-3 h-3 mr-1" />
-                            </ClientOnly>
+                            <NuxtIcon name="ph:code-duotone" class="w-3 h-3 mr-1" />
                             In Development
                           </span>
                           <span class="px-3 py-1 bg-blue-100/80 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs rounded-full flex items-center">
-                            <ClientOnly>
-                              <Icon name="ph:briefcase-duotone" class="w-3 h-3 mr-1" />
-                            </ClientOnly>
+                            <NuxtIcon name="ph:briefcase-duotone" class="w-3 h-3 mr-1" />
                             Business Solution
                           </span>
                         </div>
@@ -119,11 +103,9 @@
               </section>
 
               <!-- Core Competencies Section with animated bars -->
-              <section v-inspira="9">
+              <section data-inspira="9">
                 <div class="mb-8 flex items-center">
-                  <ClientOnly>
-                    <Icon name="ph:lightning-duotone" class="w-8 h-8 mr-3 text-indigo-500 dark:text-indigo-400" />
-                  </ClientOnly>
+                  <NuxtIcon name="ph:lightning-duotone" class="w-8 h-8 mr-3 text-indigo-500 dark:text-indigo-400" />
                   <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Core Competencies</h2>
                 </div>
                 
@@ -132,9 +114,7 @@
                     <div class="skill-bar">
                       <div class="flex justify-between mb-2">
                         <span class="text-gray-700 dark:text-gray-300 font-medium flex items-center">
-                          <ClientOnly>
-                            <Icon name="ph:database-duotone" class="w-4 h-4 mr-2 text-indigo-500" />
-                          </ClientOnly>
+                          <NuxtIcon name="ph:database-duotone" class="w-4 h-4 mr-2 text-indigo-500" />
                           Scalable backend architectures
                         </span>
                         <span class="text-indigo-600 dark:text-indigo-400 font-medium">95%</span>
@@ -147,9 +127,7 @@
                     <div class="skill-bar">
                       <div class="flex justify-between mb-2">
                         <span class="text-gray-700 dark:text-gray-300 font-medium flex items-center">
-                          <ClientOnly>
-                            <Icon name="ph:layout-duotone" class="w-4 h-4 mr-2 text-indigo-500" />
-                          </ClientOnly>
+                          <NuxtIcon name="ph:layout-duotone" class="w-4 h-4 mr-2 text-indigo-500" />
                           High-performance frontend experiences
                         </span>
                         <span class="text-indigo-600 dark:text-indigo-400 font-medium">90%</span>
@@ -162,9 +140,7 @@
                     <div class="skill-bar">
                       <div class="flex justify-between mb-2">
                         <span class="text-gray-700 dark:text-gray-300 font-medium flex items-center">
-                          <ClientOnly>
-                            <Icon name="ph:chart-line-up-duotone" class="w-4 h-4 mr-2 text-indigo-500" />
-                          </ClientOnly>
+                          <NuxtIcon name="ph:chart-line-up-duotone" class="w-4 h-4 mr-2 text-indigo-500" />
                           Infrastructure optimization
                         </span>
                         <span class="text-indigo-600 dark:text-indigo-400 font-medium">85%</span>
@@ -177,9 +153,7 @@
                     <div class="skill-bar">
                       <div class="flex justify-between mb-2">
                         <span class="text-gray-700 dark:text-gray-300 font-medium flex items-center">
-                          <ClientOnly>
-                            <Icon name="ph:git-branch-duotone" class="w-4 h-4 mr-2 text-indigo-500" />
-                          </ClientOnly>
+                          <NuxtIcon name="ph:git-branch-duotone" class="w-4 h-4 mr-2 text-indigo-500" />
                           DevOps automation
                         </span>
                         <span class="text-indigo-600 dark:text-indigo-400 font-medium">80%</span>
@@ -192,9 +166,7 @@
                     <div class="skill-bar">
                       <div class="flex justify-between mb-2">
                         <span class="text-gray-700 dark:text-gray-300 font-medium flex items-center">
-                          <ClientOnly>
-                            <Icon name="ph:plugs-connected-duotone" class="w-4 h-4 mr-2 text-indigo-500" />
-                          </ClientOnly>
+                          <NuxtIcon name="ph:plugs-connected-duotone" class="w-4 h-4 mr-2 text-indigo-500" />
                           System integration
                         </span>
                         <span class="text-indigo-600 dark:text-indigo-400 font-medium">85%</span>
@@ -211,24 +183,20 @@
             <!-- Right column (narrow) -->
             <div class="lg:col-span-4 space-y-20">
               <!-- Tech Stack Section -->
-              <section v-inspira="4">
+              <section data-inspira="4">
                 <div class="mb-8 flex items-center">
-                  <ClientOnly>
-                    <Icon name="ph:stack-duotone" class="w-8 h-8 mr-3 text-indigo-500 dark:text-indigo-400" />
-                  </ClientOnly>
+                  <NuxtIcon name="ph:stack-duotone" class="w-8 h-8 mr-3 text-indigo-500 dark:text-indigo-400" />
                   <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Tech Stack</h2>
                 </div>
                 
                 <div class="space-y-6">
                   <!-- Backend -->
-                  <div class="rounded-3xl shadow-lg overflow-hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1" v-inspira="5">
+                  <div class="rounded-3xl shadow-lg overflow-hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-inspira="5">
                     <div class="h-2 bg-blue-500"></div>
                     <div class="p-6">
                       <div class="flex items-center mb-4">
                         <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-md mr-3">
-                          <ClientOnly>
-                            <Icon name="ph:database-duotone" class="w-5 h-5 text-white" />
-                          </ClientOnly>
+                          <NuxtIcon name="ph:database-duotone" class="w-5 h-5 text-white" />
                         </div>
                         <h3 class="font-bold text-xl text-gray-900 dark:text-white">Backend</h3>
                       </div>
@@ -247,14 +215,12 @@
                   </div>
                   
                   <!-- Frontend -->
-                  <div class="rounded-3xl shadow-lg overflow-hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1" v-inspira="6">
+                  <div class="rounded-3xl shadow-lg overflow-hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-inspira="6">
                     <div class="h-2 bg-green-500"></div>
                     <div class="p-6">
                       <div class="flex items-center mb-4">
                         <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-md mr-3">
-                          <ClientOnly>
-                            <Icon name="ph:layout-duotone" class="w-5 h-5 text-white" />
-                          </ClientOnly>
+                          <NuxtIcon name="ph:layout-duotone" class="w-5 h-5 text-white" />
                         </div>
                         <h3 class="font-bold text-xl text-gray-900 dark:text-white">Frontend</h3>
                       </div>
@@ -276,14 +242,12 @@
                   </div>
                   
                   <!-- DevOps -->
-                  <div class="rounded-3xl shadow-lg overflow-hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1" v-inspira="7">
+                  <div class="rounded-3xl shadow-lg overflow-hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-inspira="7">
                     <div class="h-2 bg-purple-500"></div>
                     <div class="p-6">
                       <div class="flex items-center mb-4">
                         <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-md mr-3">
-                          <ClientOnly>
-                            <Icon name="ph:cloud-duotone" class="w-5 h-5 text-white" />
-                          </ClientOnly>
+                          <NuxtIcon name="ph:cloud-duotone" class="w-5 h-5 text-white" />
                         </div>
                         <h3 class="font-bold text-xl text-gray-900 dark:text-white">DevOps</h3>
                       </div>
@@ -302,14 +266,12 @@
                   </div>
                   
                   <!-- Performance & DX -->
-                  <div class="rounded-3xl shadow-lg overflow-hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1" v-inspira="8">
+                  <div class="rounded-3xl shadow-lg overflow-hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-inspira="8">
                     <div class="h-2 bg-red-500"></div>
                     <div class="p-6">
                       <div class="flex items-center mb-4">
                         <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-md mr-3">
-                          <ClientOnly>
-                            <Icon name="ph:lightning-duotone" class="w-5 h-5 text-white" />
-                          </ClientOnly>
+                          <NuxtIcon name="ph:lightning-duotone" class="w-5 h-5 text-white" />
                         </div>
                         <h3 class="font-bold text-xl text-gray-900 dark:text-white">Performance</h3>
                       </div>
@@ -330,11 +292,9 @@
               </section>
 
               <!-- Connect & Contact Section -->
-              <section v-inspira="10" class="sticky top-24">
+              <section data-inspira="10" class="sticky top-24">
                 <div class="mb-8 flex items-center">
-                  <ClientOnly>
-                    <Icon name="ph:chat-circle-text-duotone" class="w-8 h-8 mr-3 text-indigo-500 dark:text-indigo-400" />
-                  </ClientOnly>
+                  <NuxtIcon name="ph:chat-circle-text-duotone" class="w-8 h-8 mr-3 text-indigo-500 dark:text-indigo-400" />
                   <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Connect</h2>
                 </div>
                 
@@ -349,9 +309,7 @@
                       class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700/50 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 group"
                     >
                       <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-600 group-hover:bg-gray-800 dark:group-hover:bg-gray-900 transition-colors mb-3">
-                        <ClientOnly>
-                          <Icon name="ph:github-logo-duotone" class="w-6 h-6 text-gray-800 dark:text-white group-hover:text-white transition-colors" />
-                        </ClientOnly>
+                        <NuxtIcon name="ph:github-logo-duotone" class="w-6 h-6 text-gray-800 dark:text-white group-hover:text-white transition-colors" />
                       </div>
                       <span class="text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors font-medium">GitHub</span>
                     </a>
@@ -364,9 +322,7 @@
                       class="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 group"
                     >
                       <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-600 group-hover:bg-blue-600 transition-colors mb-3">
-                        <ClientOnly>
-                          <Icon name="ph:linkedin-logo-duotone" class="w-6 h-6 text-gray-800 dark:text-white group-hover:text-white transition-colors" />
-                        </ClientOnly>
+                        <NuxtIcon name="ph:linkedin-logo-duotone" class="w-6 h-6 text-gray-800 dark:text-white group-hover:text-white transition-colors" />
                       </div>
                       <span class="text-gray-700 dark:text-gray-300 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors font-medium">LinkedIn</span>
                     </a>
@@ -376,9 +332,7 @@
                 <!-- Contact Card -->
                 <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-3xl shadow-xl p-6 mb-6">
                   <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                    <ClientOnly>
-                      <Icon name="ph:envelope-simple-duotone" class="w-5 h-5 mr-2 text-indigo-500" />
-                    </ClientOnly>
+                    <NuxtIcon name="ph:envelope-simple-duotone" class="w-5 h-5 mr-2 text-indigo-500" />
                     Get in Touch
                   </h3>
                   <p class="text-gray-700 dark:text-gray-300 mb-4">Interested in collaborating or have a project in mind?</p>
@@ -386,9 +340,7 @@
                     href="mailto:contact@example.com" 
                     class="w-full inline-flex justify-center items-center px-4 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
                   >
-                    <ClientOnly>
-                      <Icon name="ph:paper-plane-right-duotone" class="w-5 h-5 mr-2" />
-                    </ClientOnly>
+                    <NuxtIcon name="ph:paper-plane-right-duotone" class="w-5 h-5 mr-2" />
                     Send Message
                   </a>
                 </div>
@@ -396,9 +348,7 @@
                 <!-- Inspiring Quote -->
                 <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-3xl overflow-hidden shadow-xl">
                   <div class="bg-white/10 backdrop-blur-sm p-6 relative">
-                    <ClientOnly>
-                      <Icon name="ph:quotes-duotone" class="absolute top-4 left-4 w-8 h-8 text-white/20" />
-                    </ClientOnly>
+                    <NuxtIcon name="ph:quotes-duotone" class="absolute top-4 left-4 w-8 h-8 text-white/20" />
                     <div class="text-center px-4 py-2">
                       <p class="text-white text-lg italic font-medium leading-relaxed">
                         "Always experimenting, always optimizing."
@@ -421,19 +371,49 @@
 </template>
 
 <script setup>
-import { useDark } from '@vueuse/core';
-import { ref, onMounted } from 'vue';
+// Define dark mode state and init functions
+import { ref, onMounted, watch } from 'vue';
 
-// Automatically sync dark mode with the document's root class
-const isDark = useDark();
+// Reactive dark mode state
+const isDark = ref(false);
 
-// Staggered animation for elements
+// Toggle dark mode function
+const toggleDarkMode = () => {
+  isDark.value = !isDark.value;
+};
+
+// Apply dark mode settings to document
+watch(isDark, (newValue) => {
+  if (newValue) {
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  }
+}, { immediate: true });
+
+// Initialize theme on mount
 onMounted(() => {
-  const elements = document.querySelectorAll('[v-inspira]');
+  // Check if user previously selected a theme
+  const savedTheme = localStorage.getItem('theme');
+  
+  // Check if user's system prefers dark mode
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  // Set initial theme based on saved preference or system preference
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    isDark.value = true;
+  } else {
+    isDark.value = false;
+  }
+  
+  // Staggered animation for elements
+  const elements = document.querySelectorAll('[data-inspira]');
   elements.forEach((el, index) => {
     setTimeout(() => {
       el.classList.add('visible');
-    }, 150 * index); // Slightly slower animation for better perception
+    }, 150 * index);
   });
 });
 </script>
@@ -459,11 +439,11 @@ onMounted(() => {
   }
 }
 
-[v-inspira] {
+[data-inspira] {
   opacity: 0;
 }
 
-[v-inspira].visible {
+[data-inspira].visible {
   animation: fadeInUp 0.7s ease-out forwards;
 }
 
@@ -499,5 +479,10 @@ onMounted(() => {
 .hover-lift:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Add support for tailwind dark mode */
+.dark {
+  color-scheme: dark;
 }
 </style>
